@@ -1,0 +1,64 @@
+# Enter fullscreen mode for the focused window
+alt - f: yabai -m window --toggle zoom-fullscreen
+
+# Toggle padding
+alt - o: yabai -m space --toggle padding; yabai -m space --toggle gap
+
+# Balance window proportions
+alt - e: yabai -m space --balance
+
+# Close window
+alt - x : yabai -m window --close
+
+# Rotate entire desktop setup
+alt -r : yabai -m space --rotate 90
+
+# Tranpose
+alt - t: yabai -m space --mirror x-axis
+
+###########
+#  Focus  #
+###########
+
+# Change focus of windows
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# Move focused window
+ctrl + alt - h : yabai -m window --swap west
+ctrl + alt - j : yabai -m window --swap south
+ctrl + alt - k : yabai -m window --swap north
+ctrl + alt - l : yabai -m window --swap east
+
+# Resize windows
+
+shift + alt - h :
+yabai -m window --resize left:-20:0 ; \
+    yabai -m window --resize right:-20:0
+
+shift + alt - j :
+yabai -m window --resize bottom:0:20 ; \
+    yabai -m window --resize top:0:20
+
+shift + alt - k :
+yabai -m window --resize top:0:-20 ; \
+    yabai -m window --resize bottom:0:-20
+
+shift + alt - l :
+yabai -m window --resize right:20:0 ; \
+    yabai -m window --resize left:20:0
+
+# Send window to desktop and shift focus
+alt + cmd - u : yabai -m window --space 1; skhd --key "cmd - u"
+alt + cmd - i : yabai -m window --space 2; skhd --key "cmd - i"
+alt + cmd - o : yabai -m window --space 3; skhd --key "cmd - o"
+
+cmd - l : yabai -m display --focus 1
+cmd - k : yabai -m display --focus 2
+cmd - j : yabai -m display --focus 3
+
+alt + cmd - l : yabai -m window --display 1; yabai -m display --focus 1
+alt + cmd - k : yabai -m window --display 2; yabai -m display --focus 2
+alt + cmd - j : yabai -m window --display 3; yabai -m display --focus 3

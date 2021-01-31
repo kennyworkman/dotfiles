@@ -1,0 +1,40 @@
+[alias]
+
+# View abbreviated SHA, description, and history graph of the latest 20 commits
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+[user]
+	name = Kenny Workman
+	email = kennyworkman@sbcglobal.net
+	mail = kennyworkman@sbcglobal.net
+
+[color]
+
+	# Use colors in Git commands that are capable of colored output when
+	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+	ui = auto
+
+[color "branch"]
+
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "status"]
+
+	added = yellow
+	changed = green
+	untracked = cyan
+
+# Endpoint shortcut
+[url "https://github.com/"]
+    insteadOf = gh:
+[push]
+	default = simple
