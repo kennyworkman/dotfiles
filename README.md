@@ -4,6 +4,6 @@ Dotfiles
 To set up on an empty box:
 
 ```
-wget -q0- kennethworkman.com/init.sh
+wget -qO- kennethworkman.com/init.sh
 ```
 
