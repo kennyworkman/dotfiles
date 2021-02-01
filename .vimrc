@@ -336,6 +336,13 @@ let g:user_emmet_leader_key='<C-j>'
 let g:go_fmt_command = "goimports" " Run goimports along gofmt on each save
 
 " }}}
+" .proto files {{{
+
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
+
+" }}}
 " .py files {{{
 
 " PEP8 Formatting 
