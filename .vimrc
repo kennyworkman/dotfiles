@@ -97,7 +97,7 @@ let g:ale_lint_on_text_changed = 'never' " Don't lint when typing
 
 " FIXERS
 " Specify which fixers I want with ALEFix command/save 
-let g:ale_fixers = { 'python': ['autopep8'],
+let g:ale_fixers = { 'python': ['autopep8', 'black'],
 \                    'javascript': ['eslint', 'prettier'],
 \                    'typescript': ['eslint', 'prettier'],
 \                    'typescriptreact': ['eslint', 'prettier'],
