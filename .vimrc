@@ -234,6 +234,10 @@ map <leader>ll :Limelight!!<CR>
 
 "}}}
 " vimtex {{{
+"
+" Concealment.
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 " Show information about latex project
 map <leader>li :VimtexInfo<CR>
@@ -249,8 +253,8 @@ map <leader>lt :VimtexTocOpen<CR>
 
 " Show log from compiling in a scratch buffer
 map <leader>ll :VimtexErrors<CR>
-" Set pdf viewer to skim
-let g:vimtex_view_method = "skim"
+" Set pdf viewer to zathura
+let g:vimtex_view_method = "zathura"
 
 "}}}
 " Command-T {{{
@@ -398,6 +402,12 @@ au BufNewFile,BufRead *.js
     \ set noexpandtab |
     \ set autoindent |
     \ set fileformat=unix 
+
+" }}}
+" .tex files {{{
+
+" Add relevant snippets to .js files
+let g:tex_flavor = "latex"
 
 " }}}
 " .tsx files {{{

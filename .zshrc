@@ -17,19 +17,6 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 
-
-#
-#  CS61B software to path
-#
-
-source $HOME/cs61b-software/adm/login
-
-#
-# Jena (Semantic Web) Setup
-#
-
-export JENA_HOME="/usr/local/Cellar/jena/3.13.1"
-
 # 
 # iTerm Integration
 #
@@ -256,3 +243,9 @@ if [ -f '/Users/kenny/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kenny/goo
 if [ -f '/Users/kenny/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kenny/google-cloud-sdk/completion.zsh.inc'; fi
 
 alias dot='/usr/bin/git --git-dir=/Users/kenny/.cfg/ --work-tree=/Users/kenny'
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
+
+[[ -s "/Users/kenny/.gvm/scripts/gvm" ]] && source "/Users/kenny/.gvm/scripts/gvm"
+alias pyligand=make
